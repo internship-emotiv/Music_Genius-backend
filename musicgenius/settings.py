@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'api'
-    # 'app.apps.MusicgeniusConfig',
-    # 'musicgenius.app.AppConfig'
 ]
 
 MIDDLEWARE = [
