@@ -1,7 +1,7 @@
-from django.contrib.auth.models import User
 from rest_framework import serializers
+from api.models import SpotifyPlaylist
+from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
-
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,9 +14,12 @@ class UserSerializer(serializers.ModelSerializer):
         Token.objects.create(user=user)
         return user
 
+class SpotifyPlaylistSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SpotifyPlaylist
+        fields = '__all__'
 
-# class GroupSerializer(serializers.HyperlinkedModelSerializer):
-#     class Meta:
-#         model = Group
-#         fields = ['url', 'name']
+  
+
+
 
